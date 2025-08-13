@@ -11,9 +11,9 @@ warnings.simplefilter('ignore')
 # Ensure these files are in the same directory as your Streamlit app.py.
 # You will need to replace 'rent_model.pkl', 'rent_scaler.pkl', and 'rent_features.pkl'
 # with the actual names of your saved model, scaler, and feature list files.
-MODEL_PATH = 'rent_model.pkl'
-SCALER_PATH = 'rent_scaler.pkl'
-FEATURES_PATH = 'rent_features.pkl' # This file should contain the list of column names the model expects
+MODEL_PATH = 'rf_model.pkl'
+SCALER_PATH = 'scaler.pkl'
+FEATURES_PATH = 'model_features.pkl' # This file should contain the list of column names the model expects
 
 loaded_model = None
 loaded_scaler = None
@@ -281,3 +281,4 @@ st.markdown(
     6.  Your browser will automatically open to the Streamlit app!
     """
 )
+
