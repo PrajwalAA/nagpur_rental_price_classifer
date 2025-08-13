@@ -103,7 +103,6 @@ with col1:
     bathrooms = st.number_input("Bathrooms", min_value=1, max_value=10, value=2, step=1)
     balcony = st.number_input("Balcony", min_value=0, max_value=5, value=1, step=1)
     property_age = st.number_input("Property Age (years)", min_value=0, max_value=100, value=5, step=1)
-    security_deposit = st.number_input("Security Deposit (₹)", min_value=0, max_value=500000, value=25000, step=1000)
 
 with col2:
     st.markdown("##### Location & Structure")
@@ -281,4 +280,5 @@ st.markdown(
     6.  Your browser will automatically open to the Streamlit app!
     """
 )
+
 
