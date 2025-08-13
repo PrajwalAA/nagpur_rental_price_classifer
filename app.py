@@ -39,13 +39,15 @@ CATEGORICAL_FEATURES = [
 ]
 NUMERICAL_COLS_PRESENT = [
     'Size_In_Sqft', 'Carpet_Area_Sqft', 'Bedrooms', 'Bathrooms', 'Balcony',
-    'Number_Of_Amenities', 'Floor_No', 'Total_floors_In_Building',
-    'Road_Connectivity', 'gym', 'gated_community', 'intercom', 'lift', 'pet_allowed',
+    'Number_Of_Amenities', 'Floor_No', 'Total_floors_In_Building', #'Road_Connectivity',
+    'gym', #'gated_community',
+    'intercom', 'lift', #'pet_allowed',
     'pool', 'security', 'wifi', 'gas_pipeline', 'sports_facility', 'kids_area',
-    'power_backup', 'Garden', 'Fire_Support', 'Parking', 'ATM_Near_me',
+    'power_backup', 'Garden', #'Fire_Support',
+    'Parking', 'ATM_Near_me',
     'Airport_Near_me', 'Bus_Stop__Near_me', 'Hospital_Near_me', 'Mall_Near_me',
     'Market_Near_me', 'Metro_Station_Near_me', 'Park_Near_me', 'School_Near_me',
-    'Property_Age'
+    #'Property_Age'
 ]
 
 # --- 2. Preprocessing Function for New Data ---
@@ -108,7 +110,7 @@ with col2:
     st.markdown("##### Location & Structure")
     floor_no = st.number_input("Floor Number", min_value=0, max_value=50, value=1, step=1)
     total_floors_building = st.number_input("Total Floors in Building", min_value=1, max_value=100, value=5, step=1)
-    road_connectivity = st.number_input("Road Connectivity (0-10)", min_value=0, max_value=10, value=7, step=1)
+    #road_connectivity = st.number_input("Road Connectivity (0-10)", min_value=0, max_value=10, value=7, step=1)
     number_of_amenities = st.number_input("Number of Amenities", min_value=0, max_value=30, value=5, step=1)
 
     # Categorical Inputs
@@ -145,10 +147,10 @@ with col3:
 
     st.markdown("##### Amenities (0 = No, 1 = Yes)")
     gym = st.radio("Gym", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='gym')
-    gated_community = st.radio("Gated Community", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='gated_community')
+   # gated_community = st.radio("Gated Community", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='gated_community')
     intercom = st.radio("Intercom", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='intercom')
     lift = st.radio("Lift", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='lift')
-    pet_allowed = st.radio("Pet Allowed", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='pet_allowed')
+    # pet_allowed = st.radio("Pet Allowed", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='pet_allowed')
     pool = st.radio("Pool", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='pool')
     security = st.radio("Security", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='security')
     wifi = st.radio("Wifi", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='wifi')
@@ -157,7 +159,7 @@ with col3:
     kids_area = st.radio("Kids Area", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='kids_area')
     power_backup = st.radio("Power Backup", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='power_backup')
     garden = st.radio("Garden", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='garden')
-    fire_support = st.radio("Fire Support", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='fire_support')
+    #fire_support = st.radio("Fire Support", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='fire_support')
     parking = st.radio("Parking", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='parking')
     atm_near_me = st.radio("ATM Near Me", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='atm_near_me')
     airport_near_me = st.radio("Airport Near Me", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key='airport_near_me')
@@ -181,12 +183,12 @@ if st.button("Predict Rent"):
             'Number_Of_Amenities': number_of_amenities,
             'Floor_No': floor_no,
             'Total_floors_In_Building': total_floors_building,
-            'Road_Connectivity': road_connectivity,
+            #'Road_Connectivity': road_connectivity,
             'gym': gym,
-            'gated_community': gated_community,
+            #'gated_community': gated_community,
             'intercom': intercom,
             'lift': lift,
-            'pet_allowed': pet_allowed,
+            #'pet_allowed': pet_allowed,
             'pool': pool,
             'security': security,
             'wifi': wifi,
@@ -195,7 +197,7 @@ if st.button("Predict Rent"):
             'kids_area': kids_area,
             'power_backup': power_backup,
             'Garden': garden,
-            'Fire_Support': fire_support,
+            #'Fire_Support': fire_support,
             'Parking': parking,
             'ATM_Near_me': atm_near_me,
             'Airport_Near_me': airport_near_me,
@@ -206,7 +208,7 @@ if st.button("Predict Rent"):
             'Metro_Station_Near_me': metro_station_near_me,
             'Park_Near_me': park_near_me,
             'School_Near_me': school_near_me,
-            'Property_Age': property_age,
+            #'Property_Age': property_age,
             'Area': area,
             'Zone': zone,
             'Furnishing Status': furnishing_status,
@@ -279,6 +281,7 @@ st.markdown(
     6.  Your browser will automatically open to the Streamlit app!
     """
 )
+
 
 
 
