@@ -39,7 +39,7 @@ CATEGORICAL_FEATURES = [
 ]
 NUMERICAL_COLS_PRESENT = [
     'Size_In_Sqft', 'Carpet_Area_Sqft', 'Bedrooms', 'Bathrooms', 'Balcony',
-    'Number_Of_Amenities', 'Security_Deposite', 'Floor_No', 'Total_floors_In_Building',
+    'Number_Of_Amenities', 'Floor_No', 'Total_floors_In_Building',
     'Road_Connectivity', 'gym', 'gated_community', 'intercom', 'lift', 'pet_allowed',
     'pool', 'security', 'wifi', 'gas_pipeline', 'sports_facility', 'kids_area',
     'power_backup', 'Garden', 'Fire_Support', 'Parking', 'ATM_Near_me',
@@ -279,6 +279,7 @@ st.markdown(
     6.  Your browser will automatically open to the Streamlit app!
     """
 )
+
 
 
 
