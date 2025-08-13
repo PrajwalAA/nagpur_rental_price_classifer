@@ -179,7 +179,6 @@ if st.button("Predict Rent"):
             'Bathrooms': bathrooms,
             'Balcony': balcony,
             'Number_Of_Amenities': number_of_amenities,
-            'Security_Deposite': security_deposit,
             'Floor_No': floor_no,
             'Total_floors_In_Building': total_floors_building,
             'Road_Connectivity': road_connectivity,
@@ -280,5 +279,6 @@ st.markdown(
     6.  Your browser will automatically open to the Streamlit app!
     """
 )
+
 
 
